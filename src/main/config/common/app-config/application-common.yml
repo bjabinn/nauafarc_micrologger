@@ -1,0 +1,24 @@
+#############################################################################################
+# Incluir aqui las propiedades a utilizar por Spring Boot y los componentes de la aplicación #
+##############################################################################################
+# ===================================================================
+# Spring Boot configuration properties
+# ===================================================================
+
+# ===================================================================
+# Giss framework properties
+# ===================================================================
+giss:
+  application:
+    name: poc-micrologger-far
+    capp-code: NAUA
+    development-center: ot
+
+  kafka:
+    consumer-config:
+      consumers:
+        ConsumirResultadoService:
+          topics: tp.naua.calculo-realizado
+          group-id: cg.naua.calculo-realizado
+          key-type: java.lang.String
+          value-type: es.giss.poc.farc.dto.ResultadoCalculoDto #Indica que clase utilizaremos para deserializacion
